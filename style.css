@@ -1,0 +1,120 @@
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-weight: 250;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#2b2929,#161616);
+}
+h1{
+    font-size: 25px;
+    position: absolute;
+    align-items: center;
+    
+    top: 50%;
+    left: 45%;
+    color: rgb(255, 255, 255);
+}
+.txt-animado span{
+    position: relative;
+}
+.text-animado span::before{
+    content: "";
+    color: #aba9b9;
+}
+
+
+
+
+.conteudo{
+    height: 100vh;
+    padding: 10px 4%;
+    background-color: #161616;
+    gap: 15rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.conteudo h3
+{    
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: rgb(218, 225, 231);
+}
+
+.conteudo p{
+    font-size: 1.2em;
+    color: rgb(250, 250, 249);
+}
+
+ul{
+    align-items: top center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 45px 4%;
+    gap: 10px;
+    height: 100vh;
+}
+ul li{
+    width: 50px;
+    height: 50px;
+
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px #424242c5;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: .2s;
+}
+
+ul li:hover{
+    width: 180px;
+}
+
+ul li span{
+    position: absolute;
+}
+
+ul li .icon{
+    color: #8a8a8a;
+    font-size: 1.8em;
+
+    transition: .2s;
+}
+ul li .text{
+    color: #fff;
+    font-size: 18px;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+}
+ul li:hover .text{
+    transform: scale(1);
+}
+ul li:hover .icon{
+    transform: scale(0);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+ul li:hover::before{
+    opacity: 1;
+} 
