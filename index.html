@@ -7,33 +7,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="reveal.js" defer></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>HOME</title>
+    <title>Arthiagx</title>
     
 </head>
-<body>          
-        <div class="header" id="particles-js">
-            <h1 class="txt-animado">THIAGO H.<br>
-                <span></span></h1>
-            
-        </div>
+<body>
     
-</section>
+        <div class="header" id="particles-js">
+            <h1 class="text"><span>THIAGO HENRIQUE</span>
+                </h1>        
+        </div>
+
+        <script>
+            let text = document.querySelector('.text');
+            let spans = Array.from(text.textContent.trim()).map
+            (char => `<span>${char}</span>`).join('');
+            text.innerHTML = spans;
+
+            let spanList = text.querySelectorAll('span');
+            spanList.forEach((span, index) => {
+                span.addEventListener('mouseover',() => {
+                    spanList.forEach((s,i) => {
+                        let distance = Math.abs(index - i);
+                        let delay = (distance * 0.1).toFixed(1);
+                        s.style.transitionDelay = `${delay}s`;
+                    })
+                })
+                span.addEventListener('mouseleave',()=>{
+                    spanList.forEach((s) => {
+                        s.style.transitionDelay = `0.2s`;
+                    })
+                })
+            })
+        </script>
 
 <section class="conteudo">
 
-    <h3>Olá!<br> Eu sou Thiago Henrique. <br><span></span>
-        </h3>
-        <p>Estudante brasileiro de tecnologia, desenvolvedor de projetos​<br> escaláveis e reutilizáveis
-            para facilitar a vida das pessoas.​<br>
-            Acredito que podemos melhorar a vida das pessoas através do trabalho.
-            ​<br> A tecnologia serve para melhorar a vida das pessoas,​<br> levar informação de qualidade
-             é a melhor coisa que posso fazer.</p>
+    <h3  class="efeito-txt-topo">Olá!<br> Eu sou Thiago Henrique.</h3>
+        <p class="efeito-txt-topo"> Acredito que podemos melhorar a vida das pessoas através do trabalho.
+            ​<br> A tecnologia serve para melhorar a vida das pessoas, levar informação de qualidade<br>
+             é a melhor coisa que posso fazer. Sou estudante brasileiro de tecnologia, <br>desenvolvo projetos 
+             escaláveis e reutilizáveis para facilitar a vida das pessoas.​<br></p><p class="efeito-txt-topo">Entre em contato comigo.
+           </p>
 
-             <ul>
+             <ul class="efeito-txt-topo">
                 <a href="https://www.linkedin.com/in/thiago-76a183276/">
                     <li style="--cor1: #7abfff; --cor2: #031657;">
                         <span class="icon"><i class="bi bi-linkedin"></i></span>
@@ -46,7 +71,7 @@
                         <span class="text">GitHub</span>
                     </li>
                 </a>
-                <a href="#">
+                <a href="mailto:thiago.art95@gmail.com">
                     <li style="--cor1: #455974; --cor2: #0b053d;">
                         <span class="icon"><i class="bi bi-envelope-fill"></i></span>
                         <span class="text">E-Mail</span>
@@ -59,12 +84,56 @@
                     </li>
                 </a>
                 
-            </ul>        
-    
+            </ul>   
+
 </section>
+
+<section class="projects">
+    <h2 class="efeito-txt-topo">Projetos recentes</h2>
+    <h3 class="efeito-txt-topo">Project1</h3>
+    <h3 class="efeito-txt-topo">Project1</h3>
+    <h3 class="efeito-txt-topo">Project1</h3>
+    <h3 class="efeito-txt-topo">Project1</h3>
+    <h3 class="efeito-txt-topo">Project1</h3>
+    <h3 class="efeito-txt-topo"></h3>
+    
+
+</section>
+
    
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
-     
+     <script src="script.js"></script>
 </body>
+<footer>
+    <div class="container">
+        <h2>Espero que a sua experiência tenha sido ótima e que você volte mais vezes. Obrigado!</h2>
+        <h3>Quer conversar sobre projetos ou compartilhar ideias?<br> Vamos conversar!</h3>        
+        <ul>
+            <a href="https://www.linkedin.com/in/thiago-76a183276/">
+                <li>
+                    <span class="icon"><i class="bi bi-linkedin"></i></span>
+                </li>
+            </a>
+            <a href="https://github.com/Arthiagx">
+                <li>
+                    <span class="icon"><i class="bi bi-github"></i></span>
+                </li>
+            </a>
+            <a href="mailto:thiago.art95@gmail.com">
+                <li>
+                    <span class="icon"><i class="bi bi-envelope-fill"></i></span>
+                </li>
+            </a>
+            <a href="https://wa.me/5511990026581">
+                <li>
+                    <span class="icon"><i class="bi bi-whatsapp"></i></span>
+                </li>
+            </a>
+            
+        </ul>  
+
+        <p>&copy; 2024 Arthiagx. Todos os direitos reservados.</p>
+    </div>
+</footer>
 </html>

@@ -2,40 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 250;
+    font-optical-sizing: auto;
 }
 
+/* HOME */
 #particles-js{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(#2b2929,#161616);
 }
 h1{
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
     align-items: center;
+
+    
+    cursor: pointer;
     
     top: 50%;
-    left: 45%;
-    color: rgb(255, 255, 255);
+    left: 33%;
+    color: rgb(77, 76, 76);
 }
-.txt-animado span{
-    position: relative;
-}
-.text-animado span::before{
-    content: "";
-    color: #aba9b9;
+
+.text:hover span{
+    color: #fff;
+    transition: 0.5s;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 20px #fff);
 }
 
 
-
+/* CONTEÚDO */
 
 .conteudo{
+    display: grid;
     height: 100vh;
     padding: 10px 4%;
     background-color: #161616;
-    gap: 15rem;
+    gap: 1.8rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -43,26 +48,25 @@ h1{
 
 .conteudo h3
 {    
-    font-size: 1.6em;
-    margin-bottom: 20px;
-    color: rgb(218, 225, 231);
+    font-size: 1.5em;
+    color: rgb(149, 149, 150);
 }
+
 
 .conteudo p{
-    font-size: 1.2em;
-    color: rgb(250, 250, 249);
+    font-size: 1em;
+    color: rgb(195, 196, 197);
 }
 
-ul{
-    align-items: top center;
+.conteudo ul{
+    align-items:top center;
     justify-content: center;
     display: flex;
     position: relative;
-    padding: 45px 4%;
     gap: 10px;
-    height: 100vh;
+    height: 30vh;
 }
-ul li{
+.conteudo ul li{
     width: 50px;
     height: 50px;
 
@@ -79,35 +83,35 @@ ul li{
     transition: .2s;
 }
 
-ul li:hover{
+.conteudo ul li:hover{
     width: 180px;
 }
 
-ul li span{
+.conteudo ul li span{
     position: absolute;
 }
 
-ul li .icon{
+.conteudo ul li .icon{
     color: #8a8a8a;
     font-size: 1.8em;
 
     transition: .2s;
 }
-ul li .text{
+.conteudo ul li .text{
     color: #fff;
     font-size: 18px;
     transform: scale(0);
     transition: .2s;
     transition-delay: .1s;
 }
-ul li:hover .text{
+.conteudo ul li:hover .text{
     transform: scale(1);
 }
-ul li:hover .icon{
+.conteudo ul li:hover .icon{
     transform: scale(0);
 }
 
-ul li::before{
+.conteudo ul li::before{
     content: '';
     position: absolute;
     background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
@@ -115,6 +119,104 @@ ul li::before{
     opacity: 0;
     border-radius: 60px;
 }
-ul li:hover::before{
+.conteudo ul li:hover::before{
     opacity: 1;
-} 
+}
+
+/* PROJECTS */
+
+.efeito-txt-topo{
+    visibility: hidden;
+}
+
+.projects{
+    width: 100%;
+    height: 80vh;
+    padding: 15px 4%;
+    background-color: #161616;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px #161616;
+}
+
+.projects h2
+{    
+    font-size: 1.5em;
+    color: rgb(149, 149, 150);
+    margin-bottom: 15px;
+}
+.projects h3{
+    font-size: 1.2em;
+    color: rgb(206, 207, 207);
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 8px;
+}
+.projects h3::after{
+    content: " ";
+    width: 0%;
+    height: 4%;
+    background-image: linear-gradient(45deg, #161616, #6e6e6e, #161616);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.projects h3:hover::after{
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    padding: 10px 2%;
+    background-color: #161616;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container h2{    
+    font-size: 0.9em;
+    color: rgb(212, 212, 212);
+    margin-bottom: 8px;
+}
+.container h3{
+    font-size: 0.8em;
+    color: rgb(206, 207, 207);
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1px;
+}
+
+.container p{
+    font-size: 0.7em;
+    color: rgb(212, 212, 212);
+    margin-bottom: 8px;
+}
+
+.container ul{
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    height: 8vh;
+    margin-bottom: 20vh;
+}
+.container ul li{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container ul li .icon{
+    color: #adadad;
+    font-size: 1.3em;
+}
